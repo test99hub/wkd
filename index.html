@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مجموعة WKD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- الهيدر -->
+    <header class="header">
+      <div class="container">
+        <img src="wkd.png" alt="شعار WKD" class="logo" />
+        <nav class="nav">
+          <!-- <a href="#about">عن المجموعة</a>
+          <a href="#brands">علاماتنا التجارية</a>
+          <a href="#achievements">الإنجازات</a> -->
+          <a href="#contact">تواصل معنا</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- صورة الغلاف -->
+    <section class="hero">
+      <div class="container">
+        <h1>نحو مستقبل واعد في ريادة الأعمال والامتياز التجاري</h1>
+        <a href="#contact" class="cta">قدّم طلب امتياز</a>
+      </div>
+    </section>
+
+    <!-- عن المجموعة -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>عن المجموعة</h2>
+        <p>
+          مجموعة WKD بقيادة وائل بن خالد عبد القادر دقل على مدى 10 سنوات، أسست مجموعة من العلامات التجارية الناجحة، ولديها حقوق الامتياز التجاري داخل المملكة، وتشغل مناصب قيادية في لجان الامتياز وريادة الأعمال.
+        </p>
+      </div>
+    </section>
+
+    <!-- العلامات التجارية -->
+    <section id="brands" class="section">
+      <div class="container">
+        <h2>علاماتنا التجارية</h2>
+        <div class="brands-grid">
+          <div class="brand-card florina">
+            <img src="florina.jpg" alt="فلورينا" />
+            <h3>فلورينا</h3>
+            <p>متجر لبيع الاحذية والشنط الفاخرة تتميز بجودتها وهي شركة عربية توسعت بشكل كبير ولديها اكثر من 140 فرعا حول المملكة</p>
+          </div>
+          <div class="brand-card mmmm">
+            <img src="mmmm.jpg" alt="MMMM" />
+            <h3>mmmm</h3>
+            <p>مطعم عصري يقدم اشهى الوجبات الخفيفة، أطلق أول فرع فرنشايز في المدينة المنورة وحقق نجاحًا سريعًا.</p>
+          </div>
+          <div class="brand-card ritchi">
+            <img src="richy.jpg" alt="ريتشي" />
+            <h3>ريتشي</h3>
+            <p>متجر لبيع الاقمشة الفاخرة مع وجود خدمة التفصيل والتوصيل.</p>
+          </div>
+          <div class="brand-card willies">
+            <img src="willis.jpg" alt="ويليز" />
+            <h3>ويليز</h3>
+            <p>مقاهي بطابع شبابي حديث، تأسست في فرعي الأزهري وواحة العيون، تخدم أجواء مريحة وإبداعية.</p>
+          </div>
+          <div class="brand-card takaddum">
+            <img src="iad.jpg" alt="التقدم الذكي" />
+            <h3>التقدم الذكي</h3>
+            <p>تضم مؤسسة التقدم الذكي عدة مشاريع استثمارية مميزة ومنها مشروع واحة العيون لتاجير اكشاك الدرايف الثرو.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الإنجازات -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <h2>الإنجازات</h2>
+        <ul class="achievements-list">
+          <li>تأسيس فروع ويليز ومطاعم MMMM</li>
+          <li>توسيع فروع فلورينا لـ 15 فرع فرنشايز</li>
+          <li>تأسيس ميدان جبل المدينة للفروسية</li>
+          <li>مشروع واحة العيون (درايف ثرو)</li>
+          <li>نائب رئيس لجنة الامتياز التجاري في مجلس الغرف</li>
+          <li>عضوية في المجلس السعودي الكوري ولجان ريادة الأعمال</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- التواصل -->
+    <section id="contact" class="contact-form">
+      <h2>قدم طلب امتياز تجاري</h2>
+      <form id="franchiseForm">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">رقم الجوال:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="city">المدينة:</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="brand">اختر العلامة التجارية:</label>
+        <select id="brand" name="brand" required>
+          <option value="فلورينا">فلورينا</option>
+          <option value="MMMM">mmmm</option>
+          <option value="ريتشي">ريتشي</option>
+          <option value="ويليز">ويليز</option>
+          <option value="التقدم الذكي">التقدم الذكي</option>
+        </select>
+
+        <label for="message">تفاصيل إضافية:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit">إرسال الطلب</button>
+      </form>
+      <p id="thankYouMessage" class="hidden">شكرًا لتواصلك معنا! سنرد عليك قريبًا.</p>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+      <div class="container">
+        <p>جميع الحقوق محفوظة &copy; 2025 مجموعة WKD</p>
+      </div>
+    </footer>
+  <!-- زر واتساب
+  <a href="https://wa.me/966530017278" id="whatsapp-button" target="_blank" title="تواصل عبر واتساب">
+  <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  زر العودة لأعلى الصفحة -->
+  <!-- <button id="backToTop" title="العودة لأعلى الصفحة">↑</button> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

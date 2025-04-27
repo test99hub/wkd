@@ -23,7 +23,7 @@ body {
 /* Logo Banner */
 .logo-banner {
   position: relative;
-  background-color: #09335d;
+  background-color: #03045e;
   text-align: center;
   padding: 20px 0;
 }
@@ -38,8 +38,8 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #f28500;
-  color: #fff;
+  background-color: #e79c24;
+  color: #03045e;
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 1rem;
@@ -48,12 +48,12 @@ body {
   transition: background 0.3s ease;
 }
 .lang-switch:hover {
-  background-color: #d76e00;
+  background-color: #e79c24;
 }
 
 /* Hero Section */
 .hero {
-  background-color: #09335d;
+  background-color: #03045e;
   color: #fff;
   text-align: center;
   padding: 80px 20px;
@@ -63,8 +63,8 @@ body {
   margin-bottom: 20px;
 }
 .cta {
-  background-color: #f28500;
-  color: #09335d;
+  background-color: #e79c24;
+  color: #03045e;
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 8px;
@@ -73,12 +73,12 @@ body {
   transition: background 0.3s ease;
 }
 .cta:hover {
-  background-color: #d76e00;
+  background-color: #e79c24;
 }
 
 /* Section Titles */
 .section {
-  background-color: #09335d;
+  background-color: #03045e;
   padding: 40px 20px;
   margin: 5px 0;
   border: 2px solid #fff;
@@ -152,7 +152,7 @@ body {
 
 /* Contact Form */
 .contact-form {
-  background-color: #09335d;
+  background-color: #03045e;
   width: 100%;
   max-width: 1200px;
   margin: 20px auto;
@@ -178,7 +178,7 @@ body {
   box-sizing: border-box;
 }
 .contact-form button {
-  background-color: #f28500;
+  background-color: #e79c24;
   color: #fff;
   padding: 12px 20px;
   border: none;
@@ -189,7 +189,7 @@ body {
   transition: background 0.3s ease;
 }
 .contact-form button:hover {
-  background-color: #d76e00;
+  background-color: #e79c24;
   box-shadow: 0 0 12px rgba(242, 133, 0, 0.6);
 }
 .hidden {
@@ -198,11 +198,58 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #0a3d62;
+  background-color: #03045e;
   color: #eee;
   text-align: center;
   padding: 70px;
   font-size: 0.95rem;
+}
+
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal.hidden {
+  display: none;
+}
+
+/* محتوى النافذة */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  width: auto;
+  position: relative;
+  text-align: center;
+  color: #333;
+}
+
+/* زر الإغلاق */
+.modal-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* صور المودال */
+.modal-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.modal-images img {
+  width: 32%;
+  height: auto;
+  border-radius: 4px;
 }
 
 /* Animations */

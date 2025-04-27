@@ -1,5 +1,6 @@
 // script.js
-document.getElementById('franchiseForm').addEventListener('submit', function (e) {
+const franchiseForm = document.getElementById('franchiseForm');
+franchiseForm.addEventListener('submit', function (e) {
   e.preventDefault();
   const form = e.target;
 
@@ -25,6 +26,39 @@ window.addEventListener('DOMContentLoaded', () => {
   elements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add('fade-in');
-    }, index * 200); // 200ms delay between each
+    }, index * 200);
   });
+});
+
+// Modal functionality
+const modal = document.getElementById('brandModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalImages = document.getElementById('modalImages');
+const closeBtn = document.querySelector('.modal-close');
+
+// Click on brand cards to open modal
+document.querySelectorAll('.brand-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // Set title and description
+    modalTitle.innerText = card.querySelector('h3').innerText;
+    modalDesc.innerText = card.querySelector('p').innerText;
+    
+    // Build image gallery, ensuring correct path
+    const srcList = card.dataset.images.split(',').map(s => s.trim());
+    modalImages.innerHTML = srcList.map(src => {
+      // If path starts with 'http' or 'images/', use as-is, otherwise prepend 'images/'
+      const url = src.match(/^(https?:)?\/\//) || src.startsWith('images/') ? src : `images/${src}`;
+      return `<img src="${url}" alt="${modalTitle.innerText}">`;
+    }).join('');
+
+    // Show modal
+    modal.classList.remove('hidden');
+  });
+});
+
+// Close modal on button click or outside click
+closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.classList.add('hidden');
 });
